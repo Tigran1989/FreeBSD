@@ -1,0 +1,735 @@
+FreeBSD
+
+hacker/USERS-----------
+root/Admin
+
+tigran/Tig$$
+
+
+
+											------------ ip conf & autostart ------------
+
+
+ # vi /etc/rc.conf                 
+
+
+ifconfig_em0="DHCP"
+ifconfig_em0="192.168.1.66 netmask 255.255.255.0"
+ifconfig_em0="192.168.1.66/24"
+
+defaultrouter="192.168.1.1"
+
+ifconfig_LAN="192.168.0.66/24"
+
+ifconfig_em1_name="LAN"
+
+
+
+ifconfig em0 192.168.1.77 netmask 255.255.255.0 or /24  -  changing ip 
+
+dhclient em0   - getting HDCP
+
+
+route add default 192.168.1.1    - added default route 
+
+ifconfig em1 name LAN  -  changes em1 name to LAN 
+
+
+
+
+
+
+											----------Domain Resolver ----------
+
+
+
+
+
+
+
+vi /etc/resolv.conf             
+
+
+nameserver 192.168.1.1
+nameserver 8.8.8.8
+
+
+
+
+
+
+										----------- VI EDITOR ---------
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+
+ESC  - comand mode
+
+I - insert mode
+
+X - delete symbol 
+
+dd - delete line
+
+dw - delete word
+
+:wq  - save
+
+:q!  - no save 
+
+SHIFT + O  space between line
+
+Y - copy line
+
+P - paste 
+
+
+/ - search  n - nextone
+
+
+:set number   - line number show 
+
+:0 - first line 
+:4 4th line 
+
+
+
+
+
+
+									---------------USERS-----------
+									
+									
+									
+									
+									
+									
+adduser  - add users
+
+wheel admin group 
+
+/etc/group   - here is  users groups
+
+
+
+
+
+
+								---------- PKG installing-----------
+								
+								
+								
+								
+								
+								
+								
+								
+pkg install mc   ----- install mc 
+
+
+portsnap fetch update            ----------- update packages
+
+portsnap extract         -------    extract pkg
+
+
+ls | grep mysql            --- search packages
+
+
+root@:/ # cd usr/ports/databases/
+
+
+root@:/usr/ports/databases # pkg install vim  ----- install vim 
+
+
+
+
+
+
+
+
+								
+
+								--------------- APACHE 22-----------
+
+
+
+					
+root@:/usr/ports/databases # vi /etc/hosts  ---- here we can add hostname for lo interface for ping 
+
+
+127.0.0.1               localhost freedevil   --- we change hostname here to freedevil
+
+/etc/rc.conf    here we can add startup comands
+
+
+FreeBSD# ls /usr/ports
+
+
+FreeBSD# cd /usr/ports/www/apache22
+FreeBSD# make install clean
+
+
+This will install apache2 under /usr/local.
+
+
+/usr/local/etc/apache24/httpd.conf   ----------   The Apache configuration is located in /usr/local/etc/apache24 directory.
+
+ServerName freedevil:80    -- same with hosts
+
+
+root@:/usr/ports/www/apache24 # /usr/local/etc/rc.d/apache24 restart
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FreeBSD
+
+hacker/USERS-----------
+root/Admin
+
+tigran/Tig$$
+
+
+
+											------------ ip conf & autostart ------------
+
+
+ # vi /etc/rc.conf                 
+
+
+ifconfig_em0="DHCP"
+ifconfig_em0="192.168.1.66 netmask 255.255.255.0"
+ifconfig_em0="192.168.1.66/24"
+
+defaultrouter="192.168.1.1"
+
+ifconfig_LAN="192.168.0.66/24"
+
+ifconfig_em1_name="LAN"
+
+
+
+ifconfig em0 192.168.1.77 netmask 255.255.255.0 or /24  -  changing ip 
+
+dhclient em0   - getting HDCP
+
+
+route add default 192.168.1.1    - added default route 
+
+ifconfig em1 name LAN  -  changes em1 name to LAN 
+
+# /etc/rc.d/netif restart  - Network restart
+
+
+
+
+
+
+											----------Domain Resolver ----------
+
+
+
+
+
+
+
+vi /etc/resolv.conf             
+
+
+nameserver 192.168.1.1
+nameserver 8.8.8.8
+
+
+
+
+
+
+										----------- VI EDITOR ---------
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+
+ESC  - comand mode
+
+I - insert mode
+
+X - delete symbol 
+
+dd - delete line
+
+dw - delete word
+
+:wq  - save
+
+:q!  - no save 
+
+SHIFT + O  space between line
+
+Y - copy line
+
+P - paste 
+
+
+/ - search  n - nextone
+
+
+:set number   - line number show 
+
+:0 - first line 
+:4 4th line 
+
+
+
+
+
+
+									---------------USERS-----------
+									
+									
+									
+									
+									
+									
+adduser  - add users
+
+wheel admin group 
+
+/etc/group   - here is  users groups
+
+
+
+
+
+
+								---------- PKG installing-----------
+								
+								
+								
+								
+								
+								
+								
+								
+pkg install mc   ----- install mc 
+
+
+portsnap fetch update            ----------- update packages
+
+portsnap extract         -------    extract pkg
+
+
+ls | grep mysql            --- search packages
+
+
+root@:/ # cd usr/ports/databases/
+
+
+root@:/usr/ports/databases # pkg install vim  ----- install vim 
+
+
+
+
+
+
+
+
+								
+
+								--------------- APACHE 22-----------
+
+
+
+					
+root@:/usr/ports/databases # vi /etc/hosts  ---- here we can add hostname for lo interface for ping 
+
+
+127.0.0.1               localhost freedevil   --- we change hostname here to freedevil
+
+/etc/rc.conf    here we can add startup comands
+
+
+FreeBSD# ls /usr/ports
+
+
+FreeBSD# cd /usr/ports/www/apache22
+FreeBSD# make install clean
+
+
+This will install apache2 under /usr/local.
+
+
+/usr/local/etc/apache24/httpd.conf   ----------   The Apache configuration is located in /usr/local/etc/apache24 directory.
+
+ServerName freedevil:80    -- same with hosts
+
+
+root@:/usr/ports/www/apache24 # /usr/local/etc/rc.d/apache24 restart
+
+
+
+
+
+
+
+
+
+
+
+
+
+								FIREWALL IPFW
+
+
+ipfw add 2000 allow tcp from any to any established     --------- established connection is allow
+								
+								
+ipfw add 2100 allow tcp from any to me dst-port 22 setup -------------    SHH connection is allow 
+ 
+
+
+cron
+
+rt2224# vi /opt/etc/ipf.rules.closed3
+
+vi  /opt/scripts/close3
+
+crontab -e
+
+
+
+
+
+
+create ipfw rules 
+touch /etc/ipfw.rules or conf or anything you like 
+
+
+
+
+#!/bin/sh
+ipfw -f flush
+ipfw add allow ip from any to any via lo0
+ipfw add deny ip from any to 127.0.0.0/8
+ipfw add deny ip from 127.0.0.0/8 to any
+ipfw add allow tcp from any to any established
+ipfw add allow ip from any to any frag
+ipfw add allow tcp from any to me dst-port 53 setup
+ipfw add allow udp from any to me dst-port 53
+ipfw add allow udp from me 53 to any
+ipfw add allow tcp from any to me dst-port 22,443 setup
+ipfw add allow tcp from 10.6.0.0/24 to me dst-port 80 setup
+ipfw add allow tcp from me to any setup
+ipfw add deny tcp from any to any setup
+ipfw add allow udp from me to any dst-port 53 keep-state
+ipfw add allow udp from me to any dst-port 123 keep state
+ipfw add deny ip from any to any
+ 
+ 
+ Настройка firewall на FreeBSD 11.1(ipfw):
+sudo nano /etc/rc.conf  #Редактируем конфиг системы редактором nano
+firewall_enable="YES"   #Добавляем в конфиг автозапуск ipfw
+sudo shutdown -r now   #Перезагрузим систему
+sudo ipfw show     #Текущие правила ipfw
+sudo ipfw add 02000 allow tcp from any to any established   #Вставка правила: разрешить уже установленные на позиции 02000 в списке правил
+sudo ipfw add 02100 allow tcp from any to me dst-port 22 setup  #Вставка правила: разрешить подключение с любого к серверу SSH на позицию 02100
+sudo touch /etc/ipfw.conf  #Создадим файл в /etc/ с именем ipfw.conf
+sudo nano /etc/ipfw.conf #Редактируем файл с помощью nano
+#!/bin/sh
+##################################################################################################
+ipfw -f flush         #Сбрасываем все правила
+##################################################################################################
+ipfw add allow ip from any to any via lo0      #Разрешаем все на обратной петле
+ipfw add deny ip from any to 127.0.0.0/8      #Запрещаем прохождение извне внутрь петли
+ipfw add deny ip from 127.0.0.0/8 to any      #Запрещаем прохождение из петли во внешние
+ipfw add allow tcp from any to any established     #Разрешить уже установленные
+ipfw add allow ip from any to any frag       #Разрешить фрагментированные пакеты
+ipfw add allow tcp from any to me dst-port 53 setup   #Разрешить DNS
+ipfw add allow udp from any to me dst-port 53     #Разрешить DNS
+ipfw add allow udp from me 53 to any       #Разрешить DNS
+ipfw add allow tcp from any to me dst-port 22,443 setup   #Разрешить HTTPS и SSH с любого адреса
+ipfw add allow tcp from 10.16.103.0/24 to me dst-port 80 setup #Разрешить HTTP только с подсети 10.16.103.0/24
+ipfw add allow tcp from me to any setup       #Разрешить подключение с сервера к любому внешнему
+ipfw add deny tcp from any to any setup       #Запретить установку всех остальных TCP подключений
+ipfw add allow udp from me to any dst-port 53 keep-state  #Разрешить динамические DNS
+ipfw add allow udp from me to any dst-port 123 keep-state  #Разрешить динамические NTP
+ipfw add deny ip from any to any        #Закрыть всё для всех
+##################################################################################################
+sudo nano /etc/rc.conf     #Редактируем конфиг системы редактором nano
+firewall_script="/etc/ipfw.conf" #Указываем ipfw скрипк с конфигом 
+sudo service ipfw restart   #Перезапустим ipfw
+https://www.freebsd.org/doc/ru_RU.KOI... - Руководство по использованию ipfw
+
+
+
+
+
+service ipfw restart
+ 
+ 
+ 
+ 
+ 
+ 
+																-------------------------RADIUS------------------------------
+																
+radius# tail -f /var/log/radius/radius.log
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------  DEVICE----------------------------
+
+/
+/dev
+/data
+/tmp
+/usr
+/var
+SWAP no mountpoints
+
+
+-------------------------------------- DHCP find--------------
+
+sipan# vi /etc/dhcpd.leases
+
+/10.6.0.254
+
+
+
+ gunzip -c dhcpd.log.0.bz2 | grep 10.6.0.168      
+
+ sipan# gunzip -c dhcpd.log.0.bz2 more                                                                                                                                                                                                   [^]
+
+ 
+ 
+ Petq e artaqin interfacein  trafshow anes u tesnes, webserverin vorteghic en dimum
+External hascenerum tes Ip serveri.. 37 ov ip piti lini
+Heto /etc/ipf.rules um block anel ayd range u ashxatacnel ipf -F -f /etc/ipf.rules
+Prichem ataka ba oba servera... i na stari i na novi
+
+
+----------------------------------------IP FIREWALL--------------------
+
+
+pass out quick on re1 proto tcp from 141.136.77.0/24 to 10.8.0.105  ----------- ays erkus@ nshanakuma vor mer web serverin hasaneluityuna talis menak es hasceyi rangic mnacacin argeluma
+pass in quick on re1 proto tcp from 10.8.0.105 to 141.136.77.0/24
+
+-------------------------------------------
+
+
+etq e artaqin interfacein  trafshow anes u tesnes, webserverin vorteghic en dimum
+External hascenerum tes Ip serveri.. 37 ov ip piti lini
+Heto /etc/ipf.rules um block anel ayd range u ashxatacnel ipf -F -f /etc/ipf.rules
+
+
+
+De ha... hayastanic shabat oriv iv piti kpni... du mihat hernesi vra ara tail -f /var/log/messages | grep 10.8.0.105
+
+
+hramannere hima grem
+netstat -an | more
+sa prosto cuyc e talis -gites
+netstat -an | grep ESTAB | wc
+sa ESTABLISHED connectionneri qanakn e cuyc talis
+netstat -an | grep ESTAB | awk '{print $5}' | wc
+netstat -an | grep ESTAB | awk '{print $5}' | sort
+sa el stolbikov irar hetevic cuyc e talis artaqin connectionnere
+ete uzum es tesnes vorteghic qani hat e miacac
+aveli shut vor IP-ic qani connection
+
+
+																-------------------------RADIUS------------------------------
+																
+radius# tail -f /var/log/radius/radius.log
+
+
+
+------------------------------------HERMES history -------------
+
+
+trafshow -p -n -i re0 host 46.130.240.56
+
+cat /var/log/messages | grep re1 | more
+
+vi /etc/ipf.rules
+ipf -Fa -f /etc/ipf.rules
+ 15  16:30   cat /var/log/messages | grep leading
+tail -3000f /var/log/messages | more
+tail -5000f /var/log/messages | more
+tail -7000f /var/log/messages | more
+tail -10000f /var/log/messages | more
+tail -20000f /var/log/messages | more
+tail -21000f /var/log/messages | more
+tail -23000f /var/log/messages | more
+
+ vi /etc/rc.firewall
+
+
+----------------------------------------------------------------------------------web server history ----------------------------------------
+
+netstat -an
+  369  netstat -an|grep 10.8.0.105 |wc
+  370  netstat -an|grep ESTABLISH|wc
+  487  netstat -an | grep ESTAB | grep 37.252.83.44
+
+
+/etc/rc.d/ipfw restart
+
+
+
+split tar to block 
+
+
+create:
+
+tar czvf - /opt/moodledata/ | split -b 1G - /var/local/name.tar.gz.
+
+extract:
+
+cat auawebdata.tar.gz.* | tar xzvf -
+
+
+cat /home/gss/backup/auawebdata.tar.gz.* | tar xzvf -
+
+
+
+sh /etc/rc.firewall
+
+
+																-------------------------trafshow ------------------------------
+
+
+
+netstat -an | grep 10.6.0.75      show connection 
+
+
+
+
+trafshow listen interface  
+
+trafshow -p -n -i ens160
+
+
+																-------------------open access on routers ------------------------------
+
+
+
+Jamanak unenas 10.8.0.180 baci nerqin routerneri vra.
+MBrouterum arden arvac e, petq e gvi 10.1.0.16 (/opt/etc mechi bolor filerum ev heto /opt/etc/scripts/open ashxatacvi), isk 10.1.0.9  u  10.1.0.6 petq e grvi /etc/ipf.rules file-um  ev heto  ipf -Fa -f /etc/ipf.rules hramane ashxatacvi. Dranc bolori mech arden 10.8.0.181 hamar rule ka, henc dranic arach kgres:
+ 
+pass in quick from 10.8.0.180 to any            # NewWebapps2
+pass in quick from any to 10.8.0.180
+
+
+
+
+
+	-------------------------------------------------------------------APACHE-------------------------------------------------------------------------
+
+
+
+/etc/init.d/apache2 stop
+ 
+/etc/init.d/apache2 start
+
+ps -ax | grep apache2 | wc             show apache connection 
+
+
+
+
+
+--------------------------------------------------------------------           FREEBSD REPLACE 	----------------------------------------------------------------
+
+
+:%s/old/new
+
+
+
+
+
+--------------------------------------------------------------------- FREEBSD RASPREDELENIYA PAMYATI  DLYA  SETEVOY PODSISTEMI ------------------------------------------
+
+NETSTAT -m
+
+256/254/510/26368 mbuf clusters in use (current/cache/total/max)
+
+result test machine   total buff 26368  and one blokc is 2kb total use 52.736 MB 
+
+sistem optimize network work with mbufs
+
+
+
+
+--------------------------------------------------------------------FREEBSD NETWORK WORK -----------------------------------
+netstat -na -f inet
+netstat -a -f inet
+
+oot@tigran_server:/usr/home/tigran # netstat -na -f inet
+Active Internet connections (including servers)
+Proto Recv-Q Send-Q Local Address          Foreign Address (state)
+tcp4       0     44 10.1.1.243.22          10.1.1.115.47032 ESTABLISHED
+tcp4       0      0 *.80                   *.* LISTEN
+tcp46      0      0 *.3306                 *.* LISTEN
+tcp4       0      0 127.0.0.1.25           *.* LISTEN
+tcp4       0      0 *.22                   *.* LISTEN
+udp4       0      0 *.514                  *.*
+
+
+
+netstat -nb -f inet
+
+
+root@tigran_server:/usr/home/tigran # netstat -nb -f inet
+Active Internet connections
+Proto Recv-Q Send-Q Local Address          Foreign Address (state)
+tcp4       0     44 10.1.1.243.22          10.1.1.115.47032 ESTABLISHED
+
+sockstat -4
+
+
+
+-------------------------------------------------per connection ram size can use server------------------------------------------
+
+root@tigran_server:/usr/home/tigran # sysctl net.inet.tcp.sendspace
+net.inet.tcp.sendspace: 32768
+root@tigran_server:/usr/home/tigran # sysctl net.inet.tcp.recvspace
+net.inet.tcp.recvspace: 65536
+root@tigran_server:/usr/home/tigran # sysctl net.inet.udp.recvspace
+net.inet.udp.recvspace: 42080
+
+TCP connection can use 32768byte + 65538byte = 98304 byte = 96kbyte
+
+if we want our server can use same time 100.000 user we will 96*100.000 = 9GB only for connection 
